@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --main-padding: 7rem 9rem;
+    --light-bg:rgb(232, 235, 252);
+    --red-color: #c9040f;
+}
+
+.main-heading {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.sub-heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.main-para {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    line-height: 2.5rem;
+}
+
+.sub-para {
+    font-size: 1.09rem;
+    font-family: sans-serif;
+    letter-spacing: 0.6px;
+}
+
+#hero-section {
+    background-image: url("images/home2.jpg");
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #ffff;
+    display: grid;
+    place-content: center;
+}
+
+.container-fluid {
+    width: 70%;
+    margin: auto;
+}
+
+#section2 {
+    padding: var(--main-padding);
+}
+
+
+/* section3 start*/
+
+
+
+#section3 {
+    padding: var(--main-padding);
+    background-color: var(--light-bg);
+}
+
+
+#minimal-statistics .row:last-child {
+    justify-content: center;
+}
+
+/* section3 end */
+
+
+/* our-service-start */
+
+#our-service {
+    padding: var(--main-padding);
+}
+#our-service .main-para {
+    margin: 10px 0;
+}
+#our-service .card{
+    height: 410px;
+}
+
+.icon-box-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon-box {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.icon-box i {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.icon-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.icon-box p {
+    line-height: 1.5;
+}
+
+/* our-service-end */
+
+
+/* service start */
+
+/* your CSS goes here*/
+
+
+/* services */
+
+/* section4 start */
+#section4 {
+    padding: var(--main-padding);
+    background-color: var(--light-bg);
+}
+
+#section4 .card {
+    height: 475px;
+    padding: 20px;
+}
+
+#section4 .main-para {
+    line-height: 1.4;
+}
+
+.services {
+    position: relative;
+}
+
+.services .square {
+    height: 100px;
+    width: 100px;
+    margin: 30px auto 40px;
+    position: relative;
+    border-radius: 15px;
+    transform: rotate(45deg);
+    padding: 10px;
+    background-color: var(--red-color);
+    box-shadow: 0px 0px 27px 0px #ccc;
+}
+
+.square i {
+    transform: rotate(315deg);
+    display: block;
+    color: #eaf3fa;
+    font-size: 40px;
+    padding-top: 17px;
+    padding-right: 14px;
+}
+
+.services .square::before {
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: var(--red-color);
+    content: '';
+}
+
+.services .square::after {
+    position: absolute;
+    left: 50px;
+    top: 66px;
+    width: 1px;
+    height: 88%;
+    background-color: var(--red-color);
+    content: '';
+    transform: rotate(90deg);
+}
+
+
+/* service end */
+
+
+@media screen and (max-width: 1024px) {
+    #our-service .card{
+        height: auto;
+    }
+    .icon-box{
+        height: auto;
+        margin: 0 0;
+    }
+    #section4 .card{
+        height: auto;
+    }
+    .align-items-stretch{
+        flex-direction: column;
+    }
+   
+  }
+  @media screen and (max-width: 768px) {
+    :root {
+        --main-padding: 4rem 4rem;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    :root {
+        --main-padding: 2rem 1rem;
+    }
+    .main-para{
+        line-height: 1.5rem;
+        text-align: center;
+    }
+    .main-heading {
+        font-size: 2.7rem;
+        text-align: center;
+    }
+    #section4{
+        padding-bottom: 100px;
+    }
+  }

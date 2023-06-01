@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+:root {
+    --main-padding: 7rem 9rem;
+    --light-bg: rgb(232, 235, 252);
+    --red-color: #c9040f;
+}
+
+.main-heading {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.sub-heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.main-para {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    line-height: 2.5rem;
+}
+
+.sub-para {
+    font-size: 1.09rem;
+    font-family: sans-serif;
+    letter-spacing: 0.6px;
+}
+
+#hero-section {
+    background-image: url("images/home-img.jpg");
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffff;
+    display: grid;
+    place-content: center;
+    padding: var(--main-padding);
+}
+
+#section2 {
+    padding: var(--main-padding);
+}
+
+/* section3 start*/
+#section3 {
+    background-color: var(--light-bg);
+}
+
+#section3 .row .col-xl-4 {
+    --color: var(--red-color);
+    /* the border color */
+    --border: 5px;
+    /* the border thickness*/
+    --offset: 15px;
+    /* control the offset*/
+    --gap: 5px;
+    /* the gap on hover */
+
+    --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)), var(--color) 0;
+    --_o: calc(3*var(--offset));
+    padding:
+        calc(var(--gap) + var(--border)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border));
+    background:
+        linear-gradient(var(--_c)) var(--_o) var(--_o),
+        linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
+    background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+    background-repeat: no-repeat;
+    /* filter: grayscale(.4); */
+    transition: .5s;
+}
+
+#section3 .row .col-xl-4:hover {
+    background-position: 0px 0px;
+    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    filter: grayscale(0);
+}
+
+#section3 {
+    padding: var(--main-padding);
+}
+
+#minimal-statistics .card {
+    height: 312px;
+    margin: 20px 0;
+}
+
+#minimal-statistics .row:last-child {
+    justify-content: center;
+}
+
+/* section3 end */
+
+
+/* service start */
+
+#section4 {
+    padding: var(--main-padding);
+}
+
+#section4 .services .card {
+    height: 545px;
+    clip-path: polygon(20% 0%, 0 14%, 0 51%, 0% 80%, 0 100%, 53% 100%, 100% 100%, 100% 80%, 100% 46%, 100% 0, 80% 0%, 47% 0);
+    border-top: 2px solid #c9040f;
+    border-left: 2px solid #c9040f;
+}
+#section4 .services .card:hover{
+    box-shadow: rgba(255, 134, 134, 0.734) 0px 30px 60px -12px inset, rgb(251, 80, 80) 0px 18px 36px -18px inset;
+}
+
+/* your CSS goes here*/
+.title {
+    color: #fa9746;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* services */
+
+
+.services .square {
+    height: 100px;
+    width: 100px;
+    margin: 30px auto 40px;
+    position: relative;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    padding: 10px;
+    background-color: var(--red-color);
+    box-shadow: 0px 0px 27px 0px #ccc;
+    border: 2px solid #eaf3fa;
+}
+
+.square i {
+    transform: rotate(315deg);
+    display: block;
+    color: #eaf3fa;
+    font-size: 40px;
+    padding-top: 17px;
+    padding-right: 14px;
+}
+
+
+.services .serv .num {
+    width: 60px;
+    height: 60px;
+    background-color: #7499f1;
+    box-shadow: 0px 0px 15px 0px #00a9d3;
+    margin: -38px auto 15px auto;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+    padding-top: 7px;
+    border: 1px dashed;
+}
+
+.services .serv h5 {
+    color: #fa9746;
+}
+
+.services .serv p {
+    color: #777;
+}
+
+.services .serv hr {
+    width: 30px;
+    border-top: 3px solid rgb(0 169 211);
+}
+
+
+/* service end */
+
+/* why choose us */
+
+/* Custom CSS for the "Why Choose Us?" icon box */
+.why-choose-us {
+    background-color: var(--light-bg);
+    padding: var(--main-padding);
+}
+
+
+.icon-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+
+.icon-box .box {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #c9040f;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 10px;
+    width: 30%;
+}
+
+
+.why-choose-us .main-para {
+    line-height: 1.2;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* why choose us end */
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --main-padding: 4rem 2rem;
+    }
+    #section4 .services .card {
+        height: 492px;
+    }
+    
+
+}
+
+@media screen and (max-width: 768px) {
+    .icon-box .box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    :root {
+        --main-padding: 2rem 1rem;
+    }
+
+    .main-para {
+        line-height: 1.5rem;
+        text-align: center;
+    }
+
+    .main-heading {
+        font-size: 2.7rem;
+        text-align: center;
+    }
+    #minimal-statistics .card{
+        height: auto;
+    }
+    #section4 .services .card {
+        height: auto;
+    }
+}
